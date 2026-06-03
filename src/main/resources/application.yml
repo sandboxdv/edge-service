@@ -108,6 +108,9 @@ management:
       show-components: always
       probes:
         enabled: true
+      group:
+        readiness:
+          include: readinessState,redis
 
 resilience4j:
   circuitbreaker:
