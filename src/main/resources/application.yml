@@ -97,6 +97,18 @@ spring:
           keycloak:
             issuer-uri: http://localhost:8080/realms/PolarBookshop
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: always
+      show-components: always
+      probes:
+        enabled: true
+
 resilience4j:
   circuitbreaker:
     configs:
